@@ -1,0 +1,2 @@
+Certificate Authorities                 : [!] Could not find any CAs
+Certificate Templates                   : [!] Could not find any certificate templates

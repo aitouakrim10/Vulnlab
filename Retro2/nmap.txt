@@ -1,0 +1,44 @@
+# Nmap 7.95 scan initiated Sat Sep 20 23:18:59 2025 as: /usr/lib/nmap/nmap --privileged -sV -sC -oN nmap.txt 10.10.76.106
+Nmap scan report for 10.10.76.106
+Host is up (0.017s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT      STATE SERVICE      VERSION
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2025-09-20 21:19:11Z)
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: retro2.vl, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds Windows Server 2008 R2 Datacenter 7601 Service Pack 1 microsoft-ds (workgroup: RETRO2)
+464/tcp   open  tcpwrapped
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+49154/tcp open  msrpc        Microsoft Windows RPC
+49155/tcp open  msrpc        Microsoft Windows RPC
+49157/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc        Microsoft Windows RPC
+Service Info: Host: BLN01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled and required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb-os-discovery: 
+|   OS: Windows Server 2008 R2 Datacenter 7601 Service Pack 1 (Windows Server 2008 R2 Datacenter 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: BLN01
+|   NetBIOS computer name: BLN01\x00
+|   Domain name: retro2.vl
+|   Forest name: retro2.vl
+|   FQDN: BLN01.retro2.vl
+|_  System time: 2025-09-20T23:20:04+02:00
+| smb2-time: 
+|   date: 2025-09-20T21:20:01
+|_  start_date: 2025-09-20T21:18:41
+|_clock-skew: mean: -39m57s, deviation: 1h09m14s, median: 0s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep 20 23:20:39 2025 -- 1 IP address (1 host up) scanned in 100.58 seconds
